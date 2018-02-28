@@ -1,0 +1,20 @@
+
+%border-bottom {
+	border-bottom: 1px solid $gray;
+}
+
+%link{
+	cursor: pointer;
+	outline: none;
+}
+
+%push-auto{
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+
+%flex{
+	display: flex;
+	// add flex props if needed
+}

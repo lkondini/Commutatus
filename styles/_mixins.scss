@@ -1,0 +1,33 @@
+
+
+@mixin a-prop($letterspace, $size, $color, $weight){
+	letter-spacing: $letterspace+px;
+    font-size: $size+px;
+	text-decoration: none;
+	color: $color;
+	font-weight: $weight;
+}
+
+
+@mixin box($width,$height,$background){
+	@if(type_of($height) == string){
+		height: $height;
+	}
+	@else{
+		height: $height + px;
+	}
+    width: $width + px;
+	background-color: $background;
+}
+
+@mixin background-cover($url){
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url($url);
+}
+
+@mixin push-auto{
+	margin-left: auto;
+	margin-right: auto; 
+}

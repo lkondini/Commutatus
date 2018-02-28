@@ -1,0 +1,644 @@
+
+
+//----------Importing all the dependencies from styles folder
+
+@import "mixins";
+@import "variables";
+
+@import "colors";
+@import "type";
+@import "placeholders";
+
+
+
+
+
+//--------------Explicitly adding background to navbar while scrolling 
+
+.add-background{
+    background-color: $blue;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+//------------To make disable arrow
+
+.disable{
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+
+
+
+
+//-------------Regular SCSS 
+
+*{
+	box-sizing:border-box;
+}
+
+body{
+	font-family: $app-font;
+	margin: 0;
+}
+
+
+
+
+
+//------Related to Header section
+
+
+header{
+	@include background-cover("../Assets/back.jpg");
+	overflow: hidden;
+    width: 1440px;
+    .header-outer{
+    	background-color: rgba(0,0,0,0.4);
+    	.header-inner{
+		    height: 50px;
+		    position: fixed;
+		    width: 100%;
+		    justify-content: space-around;
+		    @extend %flex;
+		}
+		.header-content{
+			width: 1152px;
+		    @include push-auto;
+		    .header-details{
+				flex-direction: column;
+			    text-align: center;
+			    @extend %flex;
+			}
+		}
+	}
+}
+
+nav{
+	@extend %flex;
+}
+
+nav.header-navs {
+	> a {
+	@include a-prop(1, 17, $white, lighter);
+    margin: 15px 7px;
+	}
+}
+
+.heading{
+	color: $white;
+	margin: 10vh 0;
+    letter-spacing: 1px;
+    font-size: 50px;
+}
+
+.sub-heading{
+	margin-bottom: 15px;
+	color: $white;
+	padding: 10px;
+    font-size: 25px;
+}
+
+
+.header-loginbtn{
+	font-size: 30px;
+	@extend %link;
+	margin: 0px auto 0 auto;
+	font-weight: 300px;
+	border-color: $white;
+    color: $blue;
+    background: none;
+	border-radius: 4px;
+    padding: 5px;
+    min-width: 100px;
+    letter-spacing: 1px;
+    background-color:$white;
+}
+
+.divider{
+	border-radius: 2px;
+    border-left: 3px solid white;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.header-navbtn{
+	font-size: 17px;
+	color: $blue;
+	margin: 10px 5px;
+	cursor: pointer;
+    border: none;
+    background: $white;
+    border-radius: 2px;
+}
+
+#logo{
+	height:43px;
+}
+
+i{
+	vertical-align: middle;
+}
+//---------Related to floating side Bar 
+
+.aside-loginbtn{
+	@extend .header-loginbtn;
+	color: $white;
+	background-color: $blue;
+	padding: 8px;
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 23px;
+    margin: 10px auto;	
+}
+
+aside{
+	position: absolute;
+	@include box(400,auto,$white);
+	height:auto;
+    top: auto;
+    left: auto;
+    right: 0;
+	border: $grey;
+    border-left-style: solid;
+    border-left-width: 0.1px;
+    border-right-style: solid;
+    border-right-width: 0.1px;
+    border-bottom-style: solid;
+    border-bottom-width: 0.1px;
+    border-top-width: none;
+    box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.45);
+    float: right;
+    .aside-content{
+    	@extend %flex;
+    	flex-direction: column;
+    	margin: 10px 0px;
+    	img{
+    		margin: auto;
+		    height: 150px;
+		    width: 300px;
+    	}
+    	div{
+    		margin: auto;
+		    width: 90%;
+		    @extend %flex;
+		    flex-direction: column;
+		    .first{
+		    	align-items: flex-start;
+		    }
+		    .second{
+	    	    justify-content: space-evenly;
+				flex-flow: row;
+				#duration{
+					padding-top: 16px;
+				}
+		    }
+		    .third{
+		    	@extend .second;
+		    	justify-content: space-between;
+		    }
+    	}
+    	
+    }
+}
+
+
+.bottom-border{
+	@extend %border-bottom;
+    padding-bottom: 10px;
+}
+
+h6{
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+
+//-----------Related to the second navbar above main content
+
+#main-nav{
+	position: absolute;
+	@include box(800,45,$white);
+    top: auto;
+    left: auto;
+    .main-navs{
+	    border-bottom: 1px solid $grey;
+		@extend %flex;
+	    justify-content: space-around;
+	    height: 100%;
+	    > a {
+	    	@include a-prop(0.5, 17, $black, 400);
+			margin: 10px 5px;
+		}
+	}
+}
+
+
+
+
+
+//------------Related to Main content 
+
+.article {
+    position: relative;
+    .main-content{
+	    width:750px;
+	    padding-top:40px;
+
+	    > h5, h4{
+	    	margin: 5px 0px;
+		}
+		> h3 {
+			padding-bottom:15px;
+		}
+	}
+}
+
+main{
+	color:$grey;
+    margin: 0 120px;
+	background-color: $white;
+	width: 1200px;
+    @include push-auto;
+}
+
+.main-header {
+}
+
+.side-header{
+	width: 140px;
+}
+
+.side-content{
+	top: 0;
+    margin-left: auto;
+    width: 552px;
+}
+
+.section-content{
+	@extend %flex;
+}
+
+section{
+	margin-top: 20px;
+}
+
+.map{
+    height: 150px;
+    background-color: beige;
+}
+
+.one{
+    @extend %flex;
+	margin-top: 50px;
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.45);
+	background-color: $white;
+	height: 400px;
+	flex-wrap:wrap;
+}	
+
+.map-inner{
+	width:100% !important;
+	height: 100% !important;
+}
+
+.sec1{
+	@include box(450,400,$lightgray);
+}
+
+.sec2{
+	@include box(750,400,$lightgray);
+	@extend %flex;
+	align-items:center;
+}
+
+p.section-text{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Bellefair', serif;
+    font-style: italic;
+    margin: 20px;
+}
+
+.sec2-content{
+    @extend %flex;
+    flex-direction:column;
+    margin: 10px;
+}
+
+
+#icons{
+    @extend %flex;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    div {
+    	 > img *{
+    		width: 50px;
+		}
+		p{
+			text-align: center;
+		}
+    }
+   
+}
+
+.sec1-tab{
+	@include box(300,180,$lightgray);
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.45);
+    border-top: 8px solid $blue;
+    > * {
+	    border: none;
+	    height: 7px;
+	    background-color: #5bd0f0;
+	    margin: 0;
+	}
+}
+
+.sec2-tab{
+	@include box(320,320,$lightgray);
+    transition: 0.5s;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.45);
+    margin: 20px 0;
+}
+
+.sec2-tab:hover{
+    box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.45);
+}
+
+#section1{
+	flex-wrap: wrap;
+    @extend %flex;
+    justify-content: space-evenly;
+    > * {
+    		margin: 20px 0px;
+    }
+}
+
+
+
+
+
+//-----------Related to footer section
+
+footer{
+	width: 1200px;
+    margin-top:50px;
+    text-align:center;
+    width:100%;
+    background-color:#dde2ca4a;
+}
+
+#footer-section{
+    @include push-auto;
+    > *{
+       	margin: 50px 0px;
+    }
+	&:first-child{
+   		padding: 20px 0;
+	}
+}
+
+#tabs{
+    @extend %flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.backdrop{
+	@include background-cover("../Assets/business.jpg");
+    overflow:hidden;
+    width: 100%;
+    height: 70%;
+    .back{
+	    @extend %flex;
+	    height:100%;
+	    color:white;
+	    background-color: rgba(0,0,0,0.6);
+	    > * {
+		    font-weight: 100;
+		    color: $white;
+		    font-size: 23px;
+		    width: 100% ;
+		    align-self: center;
+		}
+	}
+}
+
+
+p {
+	&#sec-3{
+        text-align: -webkit-auto;
+        font-size: 13px;
+        margin:0;
+	}
+}
+
+.sec-3{
+    @extend %flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    a{
+	    margin-right: auto;
+	    line-height: 18px;
+	    font-size: 12px;
+	    text-decoration: none;
+    } 
+}
+
+.intro{
+	width:90%;
+	padding: 5px;
+    flex: 0 0 250px;
+    margin: 0;
+}
+   
+.sec-3 {
+	flex-wrap:wrap;
+	a{
+		color: midnightblue;
+	}
+	p{
+		color: midnightblue;
+	}
+	> *{
+	    @extend %flex;
+	    flex-direction: column;
+	    h6 {
+		    color: $grey;
+		    margin-right: auto;
+	    }
+	 }
+
+}
+
+.alpha-outer{
+	@include box(110,110,$lightblue);
+    border: 10px solid $white;
+    margin: 10px 20px;
+}
+
+#alpha{
+    @extend %flex;
+}
+.arrow{
+	padding-top: 15px;
+	font-weight: lighter;
+    font-size: 100px;
+    color: #c1a288;
+    cursor: pointer;
+}
+.arrow-left{
+	@extend .arrow;
+	margin-right:auto;
+}
+
+.arrow-right{
+	@extend .arrow;
+    margin-left:auto;
+}
+.alpha-outer-container{
+    overflow: hidden;
+    flex: 0 0 73%;
+    @extend %flex;
+}
+
+.alpha-inner-container{
+    left:0;
+    @extend %flex;
+    position: relative;
+    transition: 0.9s;
+}
+
+
+#footer-nav{
+	position: fixed;
+    background-color: $blue;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    .footer-msg{
+		@extend nav.header-navs;
+		color: $white;
+		font-weight: 300;		
+		text-align: start;
+		padding: 0 20px;
+	}
+}
+
+
+
+
+
+//-----------------Variables used to specify width
+
+$parentWidth : 100%;
+$childWidth : 90%;
+
+//------------------Below Media queries will be applicable up to 1100px of window width
+
+@media only screen and (max-width: 1100px){
+	header{
+		width: $parentWidth !important;
+	}
+	.header-outer{
+		width: $parentWidth !important;
+	}
+	.header-inner{
+	    width: $parentWidth !important;
+	}
+	.header-content{
+	    width: $parentWidth !important;
+	}
+
+	main{
+	    margin-right: 10px;
+		width: $parentWidth;
+		> *{
+			width:$childWidth;
+	    	@include push-auto;
+		}
+	}
+
+	.main-content{
+		> * {
+			width: $parentWidth;
+			@include push-auto;
+		}
+	}
+	#article{
+		> *{
+			width: $parentWidth;
+		}
+	}
+	#main-nav{
+		display:none;
+	}
+
+	aside{
+		width: $parentWidth;
+	    @include push-auto;
+		position: relative;
+	    background-color: #ffffff;
+	    border: #9a9a9a;
+	    border-left-style: solid;
+	    border-left-width: 0.1px;
+	    border-right-style: solid;
+	    border-right-width: 0.1px;
+	    border-bottom-style: solid;
+	    border-bottom-width: 0.1px;
+	    border-top-width: none;
+	    box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.45);
+	    clear: both;
+	    margin-bottom: 20px;
+	}
+
+	.sec1-tab{
+	   width: 80%;
+	}
+
+	.one{
+		width:$parentWidth;
+		height: auto;
+		@include push-auto;
+		> * {
+			width:$parentWidth;
+			height:auto;
+		}
+	}
+	
+	footer{
+		width: $parentWidth;
+		@include push-auto;
+		> * {
+			width: $parentWidth;
+			@include push-auto;
+			.sec-2{
+				.alpha-outer-container{
+					flex: 0 0 60%;
+				}
+			}
+		}
+	}
+
+	#footer-nav{
+		height:auto;
+		width: $parentWidth;
+	}
+	.side-content{
+		width: $parentWidth;
+	}
+
+	.sec2-tab{
+		height: 250px;
+    	width: 250px;
+	}
+
+	.map-inner{
+		width: $parentWidth !important;
+	}
+
+	.arrow{
+		font-size:80px;
+	}
+}
