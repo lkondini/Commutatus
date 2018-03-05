@@ -551,6 +551,11 @@ $childWidth : 90%;
 	    width: $parentWidth !important;
 	}
 
+	.main-nav{
+		display:none;
+		width: $parentWidth !important;
+	}
+
 	main{
 	    margin-right: 10px;
 		width: $parentWidth;
@@ -571,14 +576,11 @@ $childWidth : 90%;
 			width: $parentWidth;
 		}
 	}
-	#main-nav{
-		display:none;
-	}
 
 	aside{
 		width: $parentWidth;
 	    @include push-auto;
-		position: relative;
+		position: relative !important;
 	    background-color: #ffffff;
 	    border: #9a9a9a;
 	    border-left-style: solid;

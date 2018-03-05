@@ -402,6 +402,10 @@ p#sec-3 {
   .header-content {
     width: 100% !important; }
 
+  .main-nav {
+    display: none;
+    width: 100% !important; }
+
   main {
     margin-right: 10px;
     width: 100%; }
@@ -418,14 +422,11 @@ p#sec-3 {
   #article > * {
     width: 100%; }
 
-  #main-nav {
-    display: none; }
-
   aside {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
+    position: relative !important;
     background-color: #ffffff;
     border: #9a9a9a;
     border-left-style: solid;
