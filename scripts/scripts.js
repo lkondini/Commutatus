@@ -1,5 +1,8 @@
 // window.onscroll = function(){func()};
 
+
+
+
 var headerNav = document.getElementsByClassName('header-inner')[0];
 var navObj = document.getElementById('main-nav');
 var sideBarObj = document.getElementById('main-aside');
@@ -28,6 +31,7 @@ class ScrollManager {
 		this.floatingObj = floatingObj;
 		this.zone = zone;
 		this.onScroll = this.onScroll.bind(this);
+		this.onResize = this.onResize.bind(this);
 		this.corrections = Object.assign({
 			baselineTop: 0,
 		}, corrections);
@@ -36,6 +40,16 @@ class ScrollManager {
 	//listener
 	attachListeners() {
 		addOnScrollListener(this.onScroll);
+		window.addEventListener("resize", this.onResize);
+		if (window.outerWidth < 1100) this.onResize();
+	}
+
+	reset() {
+		setStyles(this.floatingObj,{
+			position: 'relative',
+			top: 0,
+			left: 'auto',
+		});
 	}
 
 	getZoneTop() {
@@ -64,8 +78,18 @@ class ScrollManager {
 		return top;
 	}
 
+	onResize() {
+		if(window.outerWidth > 1100){
+			this.disabled = false;
+		} else {
+			this.disabled = true;
+			this.reset();
+		}
+	}
+
 	onScroll() {
-		var parentTop = this.getZoneTop();		
+		if (this.disabled) return;
+		var parentTop = this.getZoneTop();
 		var parentBottom = this.getZoneBottom();
 		var floatObjBottom = this.getFloatingObjBottom();
 		var setTop = this.heightToSet() + this.corrections.baselineTop;
@@ -103,20 +127,15 @@ class ScrollManager {
 				});
 				this.isPositionFixed = false;
 			}
-				
 		}
 	}
-	
 }
 
-// use scrollManager feature only in desktop mode
-if(window.outerWidth > 1100){
-	//Nav instance for the scroll manager class  
-	var navBarScrollManager = new ScrollManager(navObj, zone, { baselineTop: headerNav.offsetHeight});
-	//SideBar instance for the scroll manager class 
-	var sideBarScrollManager = new ScrollManager(sideBarObj, zone, { baselineTop: headerNav.offsetHeight });
-}
 
+//Nav instance for the scroll manager class  
+var navBarScrollManager = new ScrollManager(navObj, zone, { baselineTop: headerNav.offsetHeight});
+//SideBar instance for the scroll manager class 
+var sideBarScrollManager = new ScrollManager(sideBarObj, zone, { baselineTop: headerNav.offsetHeight });
 
 var index = 0;
 
