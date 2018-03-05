@@ -99,7 +99,7 @@ class ScrollManager {
 					setStyles(this.floatingObj,{
 						position: 'absolute',
 						top: setTop + 'px',
-						left: this.floatingObj.offsetLeft - this.floatingObj.parentNode.parentNode.offsetLeft + 'px',
+						left: this.floatingObj.offsetLeft > 0 ? this.floatingObj.offsetLeft - this.floatingObj.parentNode.parentNode.offsetLeft + 'px' : 0,
 					});
 					this.isPositionFixed = false;
 				}
@@ -116,7 +116,6 @@ class ScrollManager {
 				}
 			}
 		}
-
 		else if(window.scrollY <= parentTop){
 			if (this.isPositionFixed) {
 				setStyles(this.floatingObj,{
