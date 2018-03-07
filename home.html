@@ -6,10 +6,28 @@
       <link href="https://fonts.googleapis.com/css?family=Roboto:600" rel="stylesheet">
       <link href="styles/main.css"
       rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Commutatus Assignment</title>
 </head>
 <body>
+	<div id="responsive-nav" class="responsive-nav">
+		<div id="nav-wrapper" class="nav-wrapper">
+			<div class="res-navbar">
+				<p class="nav-alpha">A<span id="drop-down-arrow"><i class="fa fa-angle-down"></i></span></p>
+			</div>
+			<div id="resp-navs" class="resp-navs">
+				<div class="nav-section">
+					<a class="nav-list" href="#">Home</a>
+				</div>
+				<div class="nav-section">
+					<a class="nav-list" href="#">For Organisations</a>
+					<a class="nav-list" href="#">Sign Up</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<header>
 	<div class="header-outer">
 			<div class="header-inner">
@@ -17,19 +35,20 @@
 					<img id="logo" src="Assets/aiesec.png" alt="logo">
 				</div>
 				<nav class="header-navs">
-					<a href="">Neque</a>
-					<a href="">porro</a>
+					<a href="">For Organisations</a>
+					<a href="">Help</a>
 					<div class="divider"></div>
-					<button class="header-navbtn" type="button">adipisci</button>
-					<a href="">dolorem</a>
+					<button class="header-navbtn" type="button">Explore</button>
+					<a href="">Sign Up</a>
 				</nav>
 			</div>
+
 			<div class="header-content">
 				<div class="header-details">
-					<p class="heading">Lorem Ipsum</p>
-					<span class="sub-heading"><i class="material-icons">location_on</i>qui dolorem</span>
-					<button class="header-loginbtn" type="button">dolorem</button>
-					<span class="sub-heading"><i class="material-icons">error_outline</i>dolorem</span>
+					<p class="heading">Investor Functionality Facilitator</p>
+					<span class="sub-heading"><i class="material-icons">location_on</i>Chennai, India</span>
+					<button class="header-loginbtn" type="button">Login to Apply</button>
+					<!-- <span class="sub-heading"><i class="material-icons">error_outline</i>dolorem</span> -->
 				</div>
 			</div>
 		</div>
@@ -43,107 +62,126 @@
 						<img src="Assets/volun-logo.png">
 						<div>
 							<div class="first bottom-border">
-								<h5>LANGUAGE</h5>
-								<P>English, French</P>
+								<div class="aside-head">LANGUAGE</div>
+								<div class="aside-p">English, French</div>
 							</div>
 							<div class="second bottom-border">
 								<div>
-									<h5>EARLIEST START DATE</h5>
-									<P>28 Nov 2017</P>
+									<div class="aside-head">EARLIEST START DATE</div>
+									<div class="aside-p">28 Nov 2017</div>
 								</div>
 								<div>
-									<h5>LATEST START DATE</h5>
-									<P>28 Nov 2018</P>
+									<div class="aside-head">LATEST START DATE</div>
+									<div class="aside-p">28 Nov 2018</div>
 								</div>
 								<div id="duration">
-									<h5>DURATION</h5>
-									<P>34 Weeks</P>
+									<div class="aside-head">DURATION</div>
+									<div class="aside-p">34 Weeks</div>
 								</div>
 							</div>
 							<div class="third bottom-border">
 								<div>
-									<h5>SALARY</h5>
-									<P>unpaid</P>
+									<div class="aside-head">SALARY</div>
+									<div class="aside-p">unpaid</div>
 								</div>
 								<div>
-									<h5>POSITIONS</h5>
-									<P>2</P>
+									<div class="aside-head">POSITIONS</div>
+									<div class="aside-p">2</div>
 								</div>
 							</div>
+							<div class="fourth bottom-border">
+								<div>
+									<div class="aside-head">FEES</div>
+									<div class="aside-p" style="font-style: italic;">Please login to view fees</div>
+								</div>
 							<button class="aside-loginbtn">Login to Apply</button>
 						</div>
 					</div>
 				</aside>
 				<div id="main-nav" class="main-nav">
 					<div class="main-navs">
-						<p onclick="scrollToSecton('overview')">Overview</p>
-						<p onclick="scrollToSecton('prerequisites')">Prerequisites</p>
-						<p onclick="scrollToSecton('visaLogistics')">Visa and Logistics</p>
-						<p onclick="scrollToSecton('testimonials')">Testimonials</p>
+						<p class="overview active" onclick="scrollToSecton('overview')">Overview</p>
+						<p class="prerequisites" onclick="scrollToSecton('prerequisites')">Prerequisites</p>
+						<p class="visaLogistics" onclick="scrollToSecton('visaLogistics')">Visa and Logistics</p>
+						<p class="testimonials" onclick="scrollToSecton('testimonials')">Testimonials</p>
 					</div>
 				</div>
 			</div>
 			<div class="main-content">
 				<section id="overview">
-					<h3>Overview</h3>
-					<h4>Sustainable development goal</h4>
-					<h4>Reduced Inequalities</h4>
-					<p>Ensure enhanced representation and voice for developing countries in decision-making in global international economic and financial institutions in order to deliver more effective, credible, accountable and legitimate institutions</p>
-					<h4>Role description</h4>
+					<div class="head">Overview</div>
+					<div class="head1">Sustainable development goal</div>
+					<div class="head2">Reduced Inequalities</div>
+					<div class="reducedInequalities">
+						<p class="reducedInequalities-text">Ensure enhanced representation and voice for developing countries in decision-making in global international economic and financial institutions in order to deliver more effective, credible, accountable and legitimate institutions</p>
+						<div class="reducedInequalities-side">
+							<img class="reducedInequalities-icon">
+							<a class="reducedInequalities-link" href="#">More Opportunities for Reduced Inequalities</a>
+						</div>
+					</div>
+					<div class="head2">Role description</div>
 					<p>incubate world-class eyeballs</p>
-					<h4>Main activities</h4>
+					<div class="head2">Main activities</div>
+					<ul>
+						<li>Be smart</li>
+						<li>Explore the task carefully first</li>
+						<li>Play around with the API</li>
+						<li>Start setting up your environment</li>
+						<li>Start coding! Why're you waiting!</li>
+						<li>Submit the task. All the best</li>
+					</ul>
 				</section>
 				<section id="prerequisites">
-					<h3 class="bottom-border">Prerequisites</h3>
+					<div class="head bottom-border">Prerequisites</div>
 					<div class="section-content">
-						<h4 class="side-header">Backgrounds</h4>
+						<div class="head3 side-header">Backgrounds</div>
 						<div class="bottom-border side-content">
-							<h5>PREFERRED</h5>
+							<div class="head4">PREFERRED</div>
 							<P>Accounting, Automotive engineering</P>
 						</div>
 					</div>
 					<div class="section-content">
-						<h4 class="side-header">Skills</h4>
+						<div class="head3 side-header">Skills</div>
 						<div class="bottom-border side-content">
-							<h5>REQUIRED</h5>
+							<div class="head4">REQUIRED</div>
 							<P>React JS, Organisational Management</P>
-							<h5>PREFERRED</h5>
+							<div class="head4">PREFERRED</div>
 							<P>AWS (Amazon Web Services), Less, LAN (local area network)</P>
 						</div>
 					</div>
 					<div class="section-content">
-						<h4 class="side-header">Nationalities</h4>
+						<div class="head3 side-header">Nationalities</div>
 						<div class="bottom-border side-content">
 							<P>No preferences</P>
 						</div>
 					</div>
 					<div class="section-content">
-						<h4 class="side-header">Languages</h4>
+						<div class="head3 side-header">Languages</div>
 						<div class="bottom-border side-content">
-							<h5>PREFERRED</h5>
+							<div class="head4">PREFERRED</div>
 							<P>Dutch, Estonian</P>
 						</div>
 					</div>
 					<div class="section-content">
-						<h4 class="side-header">Study Levels</h4>
+						<div class="head3 side-header">Study Levels</div>
 						<div class="bottom-border side-content">
 							<P>Bachelor</P>
 						</div>
 					</div>
 				</section>
 				<section id="visaLogistics">
-					<h3>Visa and Logistics</h3>
-					<h4>Selection Process</h4>
-					<h4 class="bottom-border">Submit the task, come to the office for a final task, hr interview and offer letter</h4>
+					<div class="head">Visa and Logistics</div>
+					<div class="head1">Selection Process</div>
+					<div class="head1 bottom-border">Submit the task, come to the office for a final task, hr interview and offer letter</div>
 					<div class="section-content">
-						<h4 class="side-header">Working hours</h4>
+						<div class="head3 side-header">Working hours</div>
 						<div class="bottom-border side-content">
 							<p>to</p>
-							<p>Not on weekends</p>
+							<p style="font-style: italic">Not on weekends</p>
 						</div>
 					</div>
 					<div class="section-content">
-						<h4 class="side-header">Logistics</h4>
+						<div class="head3 side-header">Logistics</div>
 						<div class="bottom-border side-content">
 							<p>Computer Provided</p>
 							<p>Accommodation Provided</p>
@@ -152,7 +190,7 @@
 						</div>
 					</div>
 					<div class="section-content">
-						<h4 class="side-header">VISA</h4>
+						<div class="head3 side-header">VISA</div>
 						<div class="bottom-border side-content">
 							<div>
 								<h5>VISA TYPE</h5>
@@ -168,7 +206,7 @@
 							</div>
 						</div>
 					</div>
-					<h4>Host AIESEC office AIESEC in Official Expansion Thailand</h4>
+					<div class="head1">Host AIESEC office AIESEC in Official Expansion Thailand</div>
 					<div class="section-content">
 						<div class="bottom-border side-content">
 							<p>stars</p>
@@ -176,7 +214,7 @@
 					</div>
 					
 					<div class="section-content">
-						<h4 class="side-header">Location</h4>
+						<div class="head3 side-header">Location</div>
 						<div class="bottom-border side-content">
 							<p>The Google Maps API server rejected your request. Invalid request. Invalid 'q' parameter.</p>
 							<div class="map">
@@ -186,7 +224,7 @@
 					</div>
 				</section>
 				<section id="testimonials">
-					<h3>Testimonials</h3>
+					<div class="head">Testimonials</div>
 					<div class="bottom-border side-content">
 						<p>There are no testimonials for this opportunity, yet</p>
 					</div>
@@ -195,7 +233,7 @@
 		</article>
 
 		<section id="Leadership">
-			<h3>Leadership development</h3>
+			<div class="head">Leadership development</div>
 			<div>
 				<p>Our mission is to enable youth to develop four leadership qualities through our experiences and impact the world for the better.</p>
 				<div class="one">
@@ -232,17 +270,23 @@
 		</section>
 		<section id="section1">
 			<div class="sec1-tab">
+				<div class="tabs out-preparation">Outgoing Preparation Seminar</div>
+				<div class="tab-text">Before going abroad, a seminar will be hosted by your local office which includes goal and expectation setting to prepare you.</div>
 			</div>
 			<div class="sec1-tab">
+				<div class="tabs in-preparation">Incoming Preparation Seminar</div>
+				<div class="tab-text">Upon arrival, a seminar will be hosted by the local office to revisit your goals & expectations and support you with localization.</div>
 			</div>
 			<div class="sec1-tab">
+				<div class="tabs suppport">Experience Support</div>
+				<div class="tab-text">The local office abroad will provide personal & professional training. This may include one-on-one conversations, group learning or workshops.</div>
 			</div>
 		</section>
 	</main>
 	<footer>
 		<div id="footer-section">
 			<div class="sec-1">
-				<h3>More opportunities from Lindgren Inc</h3>
+				<div class="footer-head">More opportunities from Lindgren Inc</div>
 				<div id="tabs">
 					<div class="sec2-tab">
 						<div class="backdrop">
@@ -274,7 +318,7 @@
 				</div>
 			</div>
 			<div class="sec-2">
-				<h3>Our Premium partners</h3>
+				<div class="footer-head">Our Premium partners</div>
 				<div id="alpha">
 					<i class="arrow-left arrow disable material-icons md-48" onclick="slide(+1)">chevron_left</i>
 					<div class="alpha-outer-container">
@@ -327,43 +371,106 @@
 					<h6>AISEC</h6>
 					<p id="sec-3">AIESEC is a non-governmental not-for-profit organisation in consultative status with the United Nations Economic and Social Council (ECOSOC), affiliated with the UN DPI, member of ICMYO, and is recognized by UNESCO. AIESEC International is registered as a Foundation (Stichting), RSIN #807103895 in Rotterdam, The Netherlands.</p>
 				</div>
-				<div class="about">
-					<h6>About</h6>
-					<a href="#">About Us</a>
-					<a href="#">Help</a>
-					<a href="#">Blog</a>
-					<a href="#">Press</a>
-					<a href="#">Annual Report</a>
+				<div class="linkedList">
+					<div class="footer-link-heading" id="footer-about" onclick="dropdown(this)">
+						<p>About</p>
+					</div>
+					<div class="footer-links" id="footer-about">
+						<ul>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Press</a></li>
+							<li><a href="#">Annual Report</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="youth">
-					<h6>Youth</h6>
-					<a href="#">Global Supporter</a>
-					<a href="#">Global Partner</a>
-					<a href="#">Global Customer</a>
-					<a href="#">Global Report</a>
+				<div class="linkedList">
+					<div class="footer-link-heading" id="footer-youth" onclick="dropdown(this)">
+						<p>Youth</p>
+					</div>
+					<div class="footer-links" id="footer-youth">
+						<ul>
+							<li><a href="#">Global Supporter</a></li>
+							<li><a href="#">Global Partner</a></li>
+							<li><a href="#">Global Customer</a></li>
+							<li><a href="#">Global Report</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="organisation">
-					<h6>Organisation</h6>
-					<a href="#">Partner with Us</a>
-					<a href="#">Help</a>
-					<a href="#">Global volunteer</a>
-					<a href="#">Talent</a>
-					<a href="#">Annual Report</a>
-					<a href="#">Press</a>
-					<a href="#">Youth Speak</a>
+				<div class="linkedList">
+					<div class="footer-link-heading" id="footer-organisation" onclick="dropdown(this)">
+						<p>Organisation</p>
+					</div>
+					<div class="footer-links" id="footer-organisation">
+						<ul>
+							<li><a href="#">Partner with Us</a></li>
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Global volunteer</a></li>
+							<li><a href="#">Talent</a></li>
+							<li><a href="#">Annual Report</a></li>
+							<li><a href="#">Press</a></li>
+							<li><a href="#">Youth Speak</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="membership">
-					<h6>Membership</h6>
-					<a href="#">Partner with Us</a>
-					<a href="#">Help</a>
-					<a href="#">Talent</a>
+				<div class="linkedList">
+					<div class="footer-link-heading" id="footer-membership" onclick="dropdown(this)">
+						<p>Membership</p>
+					</div>
+					<div class="footer-links" id="footer-membership">
+						<ul>
+							<li><a href="#">Partner with Us</a></li>
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Talent</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div id="footer-nav">
 			<p class="footer-msg">This website uses cookies to ensure you get the best experience on our website. <a href="#">Learn more</a></p>
 		</div>
+		<!-- <div class="footer-links">
+			<div id="footer-about">
+				<ul>
+					<li>About Us</li>
+					<li>Help</li>
+					<li>Blog</li>
+					<li>Press</li>
+					<li>Annual Report</li>
+				</ul>
+			</div>
+			<div id="footer-youth">
+				<ul>
+					<li>Global Supporter</li>
+					<li>Global Partner</li>
+					<li>Global Customer</li>
+					<li>Global Report</li>
+				</ul>
+			</div>
+			<div id="footer-organisation">
+				<ul>
+					<li>Partner with us</li>
+					<li>Help</li>
+					<li>Global Volunlteer</li>
+					<li>Annual Report</li>
+					<li>Press</li>
+					<li>Youth Status</li>
+				</ul>
+			</div>
+			<div id="footer-membership">
+				<ul>
+					<li>Partner with us</li>
+					<li>Help</li>
+					<li>Talent</li>
+				</ul>
+			</div>
+		</div> -->
 	</footer>
+	<div id="responsive-applybtn">
+		<button id="res-loginbtn">Login to Apply</button>
+	</div>
 		 <script type="text/javascript" src="scripts/utilities.js"></script>
 		<script type="text/javascript" src="scripts/scripts.js"></script>
 </body>

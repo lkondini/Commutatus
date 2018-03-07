@@ -32,6 +32,7 @@ class ScrollManager {
 		this.zone = zone;
 		this.onScroll = this.onScroll.bind(this);
 		this.onResize = this.onResize.bind(this);
+		this.updateCorrections = this.updateCorrections.bind(this);
 		this.corrections = Object.assign({
 			baselineTop: 0,
 		}, corrections);
@@ -78,9 +79,15 @@ class ScrollManager {
 		return top;
 	}
 
+	updateCorrections(corrections){
+		this.corrections = Object.assign(this.corrections, corrections);
+	}
+
 	onResize() {
 		if(window.outerWidth > 1100){
 			this.disabled = false;
+			this.updateCorrections({ baselineTop: headerNav.offsetHeight});
+			//SideBar instance for the scroll manager class 
 		} else {
 			this.disabled = true;
 			this.reset();
@@ -93,6 +100,7 @@ class ScrollManager {
 		var parentBottom = this.getZoneBottom();
 		var floatObjBottom = this.getFloatingObjBottom();
 		var setTop = this.heightToSet() + this.corrections.baselineTop;
+		console.log(window.scrollY ,this.updateCorrections() , parentTop);
 		if(window.scrollY + this.corrections.baselineTop >= parentTop){
 			if(floatObjBottom >= parentBottom){
 				if (this.isPositionFixed) {
@@ -188,8 +196,52 @@ function scrollToSecton(sectionid){
 	var section = getElementById(sectionid);
 	const coords = section.getBoundingClientRect();
 	var sectionTop = coords.top;
-	console.log(sectionTop + window.scrollY,navHeight,headerNavHeight)
 	window.scrollTo(0, sectionTop + window.scrollY - navHeight - headerNavHeight - 10);
 	navBarScrollManager.onScroll();
 	sideBarScrollManager.onScroll();
 }
+
+var elementToBeClicked = getElementById("drop-down-arrow");
+
+elementToBeClicked.addEventListener('click',function(e){
+	var navElement = getElementById("resp-navs");
+	var navWrapper = getElementById("nav-wrapper");
+	var navBackground = getElementById("responsive-nav");
+	var eventClassname = event.target.className;
+	var element = event.target;
+	if(eventClassname.indexOf("down") > -1){
+		element.classList.remove("fa-angle-down");
+		element.classList.add("fa-angle-up");
+		navBackground.classList.add("expand-list");
+		navWrapper.style.backgroundColor = "white";
+		navBackground.style.backgroundColor = "#0000009c";
+	}
+	else{
+		element.classList.remove("fa-angle-up");
+		element.classList.add("fa-angle-down");
+		navBackground.classList.remove("expand-list");
+		navBackground.style.backgroundColor = "transparent";
+	}
+})
+
+
+function dropdown(e){
+	var elementId = document.getElementById(e.id);
+	var element = elementId.parentNode;
+	if(element.classList.contains('expand')){
+		element.classList.remove('expand');
+	}
+	else{
+		element.classList.add('expand');
+	}
+}
+
+// var clickedElement = document.getElementById('footer-link-heading');
+// console.log(clickedElement);
+// clickedElement.addEventListener('click',function(e){
+// 	console.log(e.target.parentNode,clickedElement);
+// })
+
+
+
+
