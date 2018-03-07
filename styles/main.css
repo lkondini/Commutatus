@@ -118,12 +118,12 @@ i {
   top: 0px;
   z-index: 1;
   height: 50px;
-  transition: 1s;
+  transition: 0.5s;
   overflow: hidden; }
   .responsive-nav.expand-list {
     display: block;
     height: 100%;
-    transition: 0.5s; }
+    transition: 0.3s; }
 
 .nav-wrapper {
   background-color: #ffffff; }
@@ -132,7 +132,7 @@ i {
   background-color: #ffffff;
   height: 50px;
   width: 100%;
-  box-shadow: 0px 0px 6px 1px rgba(122, 122, 122, 0.8); }
+  box-shadow: 0px 0px 3px 0px rgba(122, 122, 122, 0.8); }
 
 .resp-navs {
   margin-top: 5px;
@@ -590,6 +590,7 @@ p#sec-3 {
     width: 100% !important; }
 
   .responsive-nav {
+    box-shadow: 0px 0px 6px 1px rgba(122, 122, 122, 0.8);
     display: block; }
 
   .header-loginbtn, .aside-loginbtn {
