@@ -385,6 +385,7 @@ p.section-text {
 
 #icons {
   justify-content: space-evenly;
+  flex-wrap: wrap;
   margin-left: 20px; }
   #icons div > img * {
     width: 50px; }
@@ -522,7 +523,8 @@ p#sec-3 {
 
 .alpha-outer-container {
   overflow: hidden;
-  flex: 0 0 73%; }
+  // flex: 0 0 73%; 
+}
 
 .alpha-inner-container {
   left: 0;
@@ -660,7 +662,8 @@ p#sec-3 {
       margin-left: auto;
       margin-right: auto; }
       footer > * .sec-2 .alpha-outer-container {
-        flex: 0 0 60%; }
+        // flex: 0 0 60%;
+  }
 
   #footer-nav {
     display: none;
