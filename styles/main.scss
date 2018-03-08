@@ -278,7 +278,7 @@ aside{
 		    	margin: 10px auto;
 		    }
 		    .second{
-	    	    justify-content: space-evenly;
+	    	    justify-content: space-around;
 				flex-flow: row;
 				margin: 10px auto;
 				#duration{
@@ -497,7 +497,7 @@ p.section-text{
 
 #icons{
     @extend %flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-left: 20px;
 	flex-wrap: wrap;
     div {
@@ -546,7 +546,7 @@ p.section-text{
 #section1{
 	flex-wrap: wrap;
     @extend %flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     > * {
     		margin: 20px;
     }
@@ -577,7 +577,7 @@ footer{
 
 #tabs{
     @extend %flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -614,7 +614,7 @@ p {
 .sec-3{
     @extend %flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     a{
 	    margin-right: auto;
 	    line-height: 18px;
