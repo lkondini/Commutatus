@@ -498,6 +498,7 @@ p.section-text{
     @extend %flex;
     justify-content: space-evenly;
     margin-left: 20px;
+	flex-wrap: wrap;
     div {
     	 > img *{
     		width: 50px;
@@ -680,7 +681,6 @@ p {
 }
 .alpha-outer-container{
     overflow: hidden;
-    flex: 0 0 73%;
     @extend %flex;
 }
 
@@ -849,7 +849,7 @@ $childWidth : 90%;
 			@include push-auto;
 			.sec-2{
 				.alpha-outer-container{
-					flex: 0 0 60%;
+// 					flex: 0 0 60%;
 				}
 			}
 		}
