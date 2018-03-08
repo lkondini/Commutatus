@@ -216,7 +216,7 @@ aside {
         align-items: flex-start;
         margin: 10px auto; }
       aside .aside-content div .second, aside .aside-content div .third {
-        justify-content: space-evenly;
+        justify-content: space-around;
         flex-flow: row;
         margin: 10px auto; }
         aside .aside-content div .second #duration, aside .aside-content div .third #duration {
@@ -385,7 +385,7 @@ p.section-text {
   margin: 10px; }
 
 #icons {
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
   margin-left: 20px; }
   #icons div > img * {
@@ -424,7 +424,7 @@ p.section-text {
 
 #section1 {
   flex-wrap: wrap;
-  justify-content: space-evenly; }
+  justify-content: space-around; }
   #section1 > * {
     margin: 20px; }
 
@@ -443,7 +443,7 @@ footer {
     padding: 20px 0; }
 
 #tabs {
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap; }
 
 .backdrop {
@@ -473,7 +473,7 @@ p#sec-3 {
 
 .sec-3 {
   flex-direction: row;
-  justify-content: space-evenly; }
+  justify-content: space-around; }
   .sec-3 a {
     margin-right: auto;
     line-height: 18px;
